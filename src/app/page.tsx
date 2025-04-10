@@ -107,15 +107,15 @@ export default function Home() {
           ) : (
             <div className="flex flex-col gap-3 max-w-[50%]">
               <h1 className="text-7xl">My Job Board</h1>
-              <h4 className="text-xl">
+              <h4 className="text-3xl">
                 Welcome! This page is all about my goals in software
                 development. I&#39;m passionate about creating great solutions
                 and building a future in tech. Whether it&#39;s front-end,
                 back-end, or problem-solving with data, I&#39;m excited to grow
-                and make an impact. Explore my skills and aspirations as I
+                and make an impact. Let's explore my skills and aspirations as I
                 pursue opportunities to shape the world with code.
               </h4>
-              <h4>
+              <h4 className="text-xl">
                 Hover over <b>Jobs</b> above to get started!
               </h4>
             </div>
