@@ -54,12 +54,13 @@ export default function Home() {
       </section> */}
 
       <section className="flex justify-end h-[80vh] place-items-center text-right">
-        {display ? (
+        {display && data.title !== "" ? (
           <div className="flex flex-col justify-end gap-5">
             <h1 className="text-right text-6xl">{data.title}</h1>
+            
             <a href={data.website} className="cursor-pointer">
               <div className="flex gap-2 place-items-center justify-end">
-                <h2 className="text-4xl">{data.company}</h2>
+                <h2 className="text-2xl">{data.company}</h2>
 
                 <img
                   src={data.href}
@@ -82,16 +83,16 @@ export default function Home() {
                   <h3 className="font-bold">Requirements</h3>
                   <h3 className="text-sm">{data.requirements}</h3>
                 </div>
-                {/* <div>
-                  <button className={colorClass}>learn more</button>
-                </div> */}
+                <div>
+                  <button className="bg-green-400">learn more</button>
+                </div>
               </div>
             </div>
           </div>
         ) : (
           <div className="flex flex-col gap-3 max-w-[50%]">
-            <h1 className="text-5xl">My Job Board</h1>
-            <h4 className="text-sm">
+            <h1 className="text-7xl">My Job Board</h1>
+            <h4 className="text-xl">
               Welcome! This page is all about my goals in software development.
               I&#39;m passionate about creating great solutions and building a
               future in tech. Whether it's front-end, back-end, or

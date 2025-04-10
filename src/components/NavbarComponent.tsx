@@ -98,7 +98,7 @@ export function NavbarComponent() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Jobs</NavigationMenuTrigger>
+          <NavigationMenuTrigger><button>Jobs</button></NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-1 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component, idx) => (

@@ -32,17 +32,14 @@ export function fetchData(entry: Job) {
 }
 
 export function getData() {
-  console.log(data);
   return data;
 }
 
 export function toggleDisplay(bool: boolean) {
   display = bool;
-  console.log(display);
   return display;
 }
 
 export function getDisplay() {
-  console.log(display);
   return display;
 }

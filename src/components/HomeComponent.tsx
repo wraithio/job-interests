@@ -20,7 +20,7 @@ export function HomeComponent() {
             className={navigationMenuTriggerStyle()}
             onClick={() => toggleDisplay(false)}
           >
-            <button>Home</button>
+            <button className="text-xl">Home</button>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
