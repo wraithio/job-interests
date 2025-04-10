@@ -1,6 +1,5 @@
 "use client";
 import * as React from "react";
-import Link from "next/link";
 
 import {
   NavigationMenu,
@@ -17,10 +16,10 @@ export function HomeComponent() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink
-            className={navigationMenuTriggerStyle()}
+            className={`${navigationMenuTriggerStyle()} hover:cursor-pointer text-xl`}
             onClick={() => toggleDisplay(false)}
           >
-            <button className="text-xl">Home</button>
+            Home
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

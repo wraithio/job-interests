@@ -132,15 +132,6 @@
   }
 }
 
-body{
-  background-image: url(/wallpaperwhite.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-button{
-  background-color: transparent;
-}
 button:hover{
   cursor: pointer;
 }

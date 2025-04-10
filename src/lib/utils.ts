@@ -14,6 +14,8 @@ export interface Job {
   requirements: string;
   color: string;
   website: string;
+  bd: string;
+  link:string
 }
 
 let display = false;
@@ -26,6 +28,8 @@ let data: Job = {
   description: "",
   href: "",
   website: "",
+  bd:"",
+  link:""
 };
 export function fetchData(entry: Job) {
   return (data = entry);

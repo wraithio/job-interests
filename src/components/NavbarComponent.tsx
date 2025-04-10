@@ -1,19 +1,14 @@
 "use client";
 import * as React from "react";
-import Link from "next/link";
 
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { fetchData, Job } from "@/lib/utils";
-import { useRouter } from "next/navigation";
-
 const components: Job[] = [
   {
     title: "Full Stack Software Engineer",
@@ -27,6 +22,8 @@ const components: Job[] = [
       "The job requires Typescript and React, both of which I am familiar with. I would have to learn Angular and some Java, as the job description requires some experience in both.",
     color: "purple-400",
     website: "https://www.starburst.io/",
+    bd:"starburst-bg.jpg",
+    link:"https://job-boards.greenhouse.io/starburst/jobs/4461031008"
   },
   {
     title: "Frontend Engineer",
@@ -40,6 +37,8 @@ const components: Job[] = [
       "This position is a temp job that could form into a full-time/partner role. I have an interest in the world of fashion and e-commerce. I believe I currently have the skills to excel in this role and a very small start-up like this would be a perfect role to dip my feet into.",
     color: "red-400",
     website: "https://www.shopari.com/",
+    bd:"ari-bg.jpg",
+    link:"https://wellfound.com/jobs/3140131-frontend-engineer-react-native-expo-experience-required"
   },
   {
     title: "Apple Cloud Storage Engineer",
@@ -52,7 +51,9 @@ const components: Job[] = [
     requirements:
       "I would have to learn Golang, Agile, and more Linux OS to even think about applying here. This would be my dream job out of the five. Although, I have been on Windows machines most of my life, I`ve come to appreciate the simplicity and sleek aethetic that Apple products provide and would be a dream to be a part of creating that experience for people across the world.",
     color: "slate-400",
-    website:"https://www.apple.com/"
+    website:"https://www.apple.com/",
+    bd:"apple-bg.jpg",
+    link:"https://jobs.apple.com/en-us/details/200593704/software-engineer?team=SFTWR"
   },
   {
     title: "Product Designer",
@@ -65,7 +66,9 @@ const components: Job[] = [
     requirements:
       "The job description requires a bachelor's degree, a few years of experience, Figma experience, and a `growth mindset`. This would be a great position for me in a few years time after my earn my degree and am more confident in my skills.",
     color: "blue-500",
-    website:"https://www.certa.ai/"
+    website:"https://www.certa.ai/",
+    bd:"certa-bg.jpg",
+    link:"https://wellfound.com/jobs/3171090-product-designer"
   },
   {
     title: "GPU Performance Architect",
@@ -78,29 +81,24 @@ const components: Job[] = [
     requirements:
       "Undergrad degree required. Knowledge of Graphics/Compute APIs (DirectX/OpenGL/Vulkan/OpenCL etc.) & knowledge of GPU architecture. I would love to work with this company, I am learning more about computer hardware and having a career with a fusion of both soft and hardware would be perfect for me.",
     color: "green-400",
-    website:"https://www.amd.com/en.html"
+    website:"https://www.amd.com/en.html",
+    bd:"amd-bg.jpg",
+    link:"https://careers.amd.com/careers-home/jobs?keywords=GPU%20Performance%20Architect"
   },
 ];
 
 export function NavbarComponent() {
-  const router = useRouter();
-
   const saveData = (index: number) => {
     const data = components[index];
-    // const button:HTMLElement|null = document.getElementById("radix-«R14tl7»-trigger-radix-«R74tl7»")
-    // if(button){
-    //     button.setAttribute("aria-expanded","false")
-    //     button.setAttribute("data-state","closed")
-    // }
     fetchData(data);
   };
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger><button>Jobs</button></NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent text-xl">Jobs</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-1 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-1 md:w-[500px] md:grid-cols-2 lg:w-[600px] border-0 bg-black/10 backdrop-blur-md">
               {components.map((component, idx) => (
                 <li key={component.title}>
                   <div
