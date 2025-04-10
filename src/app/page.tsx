@@ -3,7 +3,7 @@ import HomeComponent from "@/components/HomeComponent";
 import NavbarComponent from "@/components/NavbarComponent";
 import { getData, getDisplay, Job } from "@/lib/utils";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [display, setDisplay] = useState<boolean>(getDisplay);
@@ -19,11 +19,6 @@ export default function Home() {
     bd: "wallpaperwhite.jpg",
     link: "",
   });
-
-  let colorClass = `to-${data.color}`;
-  useEffect(() => {
-    colorClass = `to-${data.color}`;
-  }, [data]);
 
   const handleClick = () => {
     setDisplay(true);
