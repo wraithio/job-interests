@@ -22,7 +22,7 @@ export default function Home() {
 
   let colorClass = `to-${data.color}`;
   useEffect(() => {
-    colorClass = `bg-${data.color}`;
+    colorClass = `to-${data.color}`;
   }, [data]);
 
   const handleClick = () => {
@@ -39,9 +39,9 @@ export default function Home() {
     >
       <div
         className={`${
-          data.title !== ""
+          data.title !== "" && data.company !== "ARI"
             ? "bg-black/20 backdrop-blur-sm min-h-screen px-5"
-            : "px-5"
+            : "bg-white/20 backdrop-blur-sm min-h-screen px-5"
         }`}
       >
         <section className="flex gap-3 py-4">
@@ -61,8 +61,12 @@ export default function Home() {
             <div className="flex flex-col justify-end gap-5">
               <h1 className="text-right text-6xl font-[200]">{data.title}</h1>
 
-                <div className="flex justify-end">
-              <a href={data.website} target="_blank" className="cursor-pointer flex place-items-center gap-2">
+              <div className="flex justify-end">
+                <a
+                  href={data.website}
+                  target="_blank"
+                  className="cursor-pointer flex place-items-center gap-2"
+                >
                   <h2 className="text-2xl font-[200]">{data.company}</h2>
 
                   <Image
@@ -72,8 +76,8 @@ export default function Home() {
                     alt={`${data.company} logo`}
                     className="w-24 h-24"
                   />
-              </a>
-                </div>
+                </a>
+              </div>
               <div className="flex justify-end">
                 <div className="lg:w-[60%] w-full flex flex-col gap-3">
                   <div>
@@ -91,11 +95,12 @@ export default function Home() {
                   <div>
                     <a href={data.link} target="_blank">
                       <button
+                        style={{background: `linear-gradient(to right, rgba(0, 0, 0, 0),${data.color}`}}
                         className={`p-2 border ${
                           data.title !== "" && data.company !== "ARI"
                             ? "border-white"
                             : "border-black"
-                        } bg-gradient-to-r from-transparent ${colorClass} hover:bg-gradient-to-l font-[200] hover:font-[400]`}
+                        }hover:font-[400]`}
                       >
                         learn more
                       </button>
@@ -121,7 +126,7 @@ export default function Home() {
             </div>
           )}
         </section>
-        {/* <div className="h-[104px]"></div> */}
+        <div className="h-[104px]"></div>
       </div>
     </main>
   );

@@ -24,4 +24,4 @@ Must be designed in a thoughtful manner
 
 github [here](https://github.com/wraithio/job-interests)
 
-vercel [here](https://pokeapi-nextjs-beta.vercel.app/)
+vercel [here](https://job-interests.vercel.app/)

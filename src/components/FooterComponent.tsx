@@ -3,7 +3,7 @@ import React from "react";
 
 const FooterComponent = () => {
   return (
-    <section className="fixed bottom-0 w-full flex flex-col bg-gradient-to-b from-transparent to-slate-500 text-white">
+    <section className="fixed bottom-0 w-full flex flex-col bg-gradient-to-b from-transparent to-slate-600 text-white">
       <div className="flex justify-center">
         <Image
           src="/insigoutline.png"
