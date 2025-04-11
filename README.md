@@ -17,7 +17,8 @@ Must be designed in a thoughtful manner
 
 
     Peer Review: 
-  
+  Darryl Patton.
+  This is really good. I the navbar placed off to the left, with the welcome message pushed to the right, and your logo at the center-bottom really make a visual pleasing aesthetic. Marketing wise, its nice, the eyes have a trail to follow. The footer with codestack s7 and your name is a great touch.Learn more buttons are a great way to incorporate your links to the job description. Only thing i would add is a favicon (your logo). But other than that, Great job Aaron.
 
 
 ---
